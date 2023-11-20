@@ -62,7 +62,14 @@ let team = [
 ];
 
 const teamContainer = document.createElement("div");
-teamContainer.classList.add("d-flex", "flex-wrap", "grid", "gap-3", "justify-content-center", "p-3");
+teamContainer.classList.add(
+  "d-flex",
+  "flex-wrap",
+  "grid",
+  "gap-3",
+  "justify-content-center",
+  "p-3"
+);
 document.body.appendChild(teamContainer);
 
 printTeam(team);

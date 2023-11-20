@@ -2,6 +2,7 @@
 
 // functions
 
+//funzione stampa team
 function printTeam(team) {
     team.forEach(member => {
         console.log(`Name: ${member.name}`);
@@ -9,6 +10,19 @@ function printTeam(team) {
         console.log(`Photo: ${member.pic}`);
     });
 }
+
+//funzione stampa team in pagina
+function printTeamHTML(team, container) {
+team.forEach(member => {
+    const memberInfo = document.createElement("div");
+    memberInfo.innerHTML = `
+        <p>Name: ${member.name}</p>
+        <p>Role: ${member.role}</p>
+        <p>Photo: ${member.pic}</p>
+    `;
+    container.appendChild(memberInfo);
+    document.body.appendChild(container);
+});}
 
 // execution
 
@@ -45,4 +59,8 @@ let team = [
     }
 ];
 
+const teamContainer = document.createElement("div");
+document.body.appendChild(teamContainer);
+
 printTeam(team);
+printTeamHTML(team, teamContainer);

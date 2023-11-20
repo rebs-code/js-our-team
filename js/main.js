@@ -1,5 +1,17 @@
 "use strict";
 
+// functions
+
+function printTeam(team) {
+    team.forEach(member => {
+        console.log(`Name: ${member.name}`);
+        console.log(`Role: ${member.role}`);
+        console.log(`Photo: ${member.pic}`);
+    });
+}
+
+// execution
+
 let team = [
     {
         name: "Wayne Barnett",
@@ -32,3 +44,5 @@ let team = [
         pic: "barbara-ramos-graphic-designer.jpg"
     }
 ];
+
+printTeam(team);

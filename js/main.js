@@ -15,12 +15,10 @@ function printTeam(team) {
 function printTeamHTML(team, container) {
 team.forEach(member => {
     const memberInfo = document.createElement("div");
-    const image = document.createElement("img");
-    image.src = member.pic;
     memberInfo.innerHTML = `
         <p>Name: ${member.name}</p>
         <p>Role: ${member.role}</p>
-        
+        <img src="./img/${member.pic}" alt="${member.name}">
     `;
     container.appendChild(memberInfo);
     document.body.appendChild(container);
